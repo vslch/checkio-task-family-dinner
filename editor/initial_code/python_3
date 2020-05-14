@@ -1,16 +1,21 @@
-def sum_two(a, b):
-    """
-        sums two passed arguments
-    """
-    # your code here
-    return None
+from typing import List
 
+def best_plates(cut: List[List[int]], guests: int) -> int:
+    #replace this for solution
+    return 1
 
+#These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
+
     print("Example:")
-    print(sum_two(3, 2))
-    
-    # These "asserts" are used for self-checking and not for an auto-testing
-    assert sum_two(3, 2) == 5, "First"
-    assert sum_two(5, 7) == 12, "Second"
+	
+    print(best_plates([[10, 10, 100, 30], [80, 50, 10, 50,]], 5))
+
+    assert best_plates([[10, 10, 100, 30], 
+						[80, 50, 10, 50,]], 5) == 150, "Example #1"
+						
+    assert best_plates([[80, 80],
+						[15, 50],
+						[20, 10]], 3) == 180, "Example #2"
+						
     print("Coding complete? Click 'Check' to earn cool rewards!")
