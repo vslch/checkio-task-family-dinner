@@ -1,20 +1,40 @@
 <!-- Describe task in general -->
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+Dr. Mickhead's family is visiting him the next Sunday to have dinner all together. 
+He wishes the party to be really special, so he plans to use his best plates for 
+the table setting. Dr. Mickhead has N stacks of plates. Each stack contains K plates. 
+Each plate has a positive beauty value, describing how beautiful it looks. Dr. Mickhead 
+would like to take exactly P plates to use for the dinner. If he would like to take 
+a plate in a stack, he must also take all of the plates above it in that stack as well.
+Help Dr. Mickhead calculate the maximum of the total sum of beauty values that can
+be achieved by picking P plates.
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong>
+	<p>
+		Two arguments
+		<ul>
+			<li>
+			First - list of lists of equal size. The i-th list contains positive integers, 
+			describing the beauty values of i-th stack of plates from top to bottom;
+			</li>
+			<li>
+			Second - positive integer. The amount of plates Dr. Mickhead is willing to put
+			on the table.
+			</li>
+		</ul>
+	</p>
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong>
+	<p>
+	An integer - the maximum of the total sum of beauty values that can be achieved 
+	with respect to the constraints.
+	</p>
 </p>
 
 
@@ -23,16 +43,26 @@
     <p>
         <strong>Example:</strong>
     </p>
+	<p>
+	Consider the following input: <i>[[10, 10, 100, 30], [80, 50, 10, 50,]], 5</i>.
+	So the best option would be picking 3 plates from the first stack 
+	and 2 plates from the second stack. In total, the sum of beauty values is 250.
+	<pre class="for_info_only">
+	[10, 10, 100, _] -> total: 10 + 10 + 100 = 120
+	[80, 50,   _, _] -> total: 80 + 50       = 130
+	----------------------------------------------
+	                    total: 120 + 130     = 250
+	</pre>
+	</p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: python">
+best_plates([[10, 10, 100, 30], 
+             [80, 50, 10, 50,]], 5) == 250
+			 
+best_plates([[80, 80],
+             [15, 50],
+             [20, 10]], 3) == 180
 </pre>
-{% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
-</pre>
-{% endif %}
 </div>
 
 
@@ -41,12 +71,14 @@ sum_two(5, 7) == 12
 <p class="for_info_only">
 
     <strong>How it’s used: </strong>
-    <i>(math is used everywhere)</i>
+	<i>This is a variation of a very well-known knapsack problem.</i>
 </p>
 
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
+    <strong>Precondition:</strong> </br>
+    1 &le; len(stacks) &le; 100    </br>
+	1 &le; len(stacks[i]) &le; 50  </br>
+	1 &le; stacks[i][j] &le; 1000
 </p>
