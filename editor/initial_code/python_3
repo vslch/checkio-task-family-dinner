@@ -1,6 +1,6 @@
 from typing import List
 
-def best_plates(cut: List[List[int]], guests: int) -> int:
+def best_plates(stacks: List[List[int]], guests: int) -> int:
     #replace this for solution
     return 1
 
