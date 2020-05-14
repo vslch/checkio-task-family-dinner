@@ -12,7 +12,7 @@ if __name__ == '__main__':
     print(best_plates([[10, 10, 100, 30], [80, 50, 10, 50,]], 5))
 
     assert best_plates([[10, 10, 100, 30], 
-						[80, 50, 10, 50,]], 5) == 150, "Example #1"
+						[80, 50, 10, 50,]], 5) == 250, "Example #1"
 						
     assert best_plates([[80, 80],
 						[15, 50],
