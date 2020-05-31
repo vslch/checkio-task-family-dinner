@@ -1,17 +1,17 @@
 <!-- Describe task in general -->
 
 <p>
-Dr. Mickhead's family is visiting him the next Sunday to have dinner all together. 
+Dr. Mickhead's family is visiting him next Sunday to have dinner together. 
 He wishes the party to be really special, so he plans to use his best plates for 
 the table setting. Dr. Mickhead has N stacks of plates. Each stack contains K plates. 
 Each plate has a positive beauty value, describing how beautiful it looks. Dr. Mickhead 
-would like to take exactly P plates to use for the dinner. If he would like to take 
-a plate from a stack, he must also take all of the plates above it in that stack as well.
-Help Dr. Mickhead to calculate the maximum of the total sum of beauty values that can
+would like to take exactly P plates to use for dinner. If he would like to take 
+a plate from a stack, he must also take all of the plates above it.
+Help Dr. Mickhead to calculate the maximum total sum of beauty values that can
 be achieved by picking P plates.
 </p>
 <p>
-<strong>Note: </strong> P is always less or equal than total amount of plates in all stacks.
+<strong>Note: </strong> P is always less than or equal to the total amount of plates in all stacks.
 <p>
 <p>
 <i>This mission was proposed by Ben Jacobson and Wajeb Saab for Google Kickstart Round A 2020.</i>
@@ -19,16 +19,15 @@ be achieved by picking P plates.
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong>
+    <strong>Input: </strong> Two arguments
 	<p>
-		Two arguments
 		<ul>
 			<li>
-			First - list of lists of equal size. The i-th list contains positive integers, 
+			The first one is a list of lists of equal size. The i-th list contains positive integers, 
 			describing the beauty values of i-th stack of plates from top to bottom;
 			</li>
 			<li>
-			Second - positive integer. The amount of plates Dr. Mickhead is willing to put
+			The second is a positive integer. The amount of plates Dr. Mickhead is willing to put
 			on the table.
 			</li>
 		</ul>
@@ -36,11 +35,8 @@ be achieved by picking P plates.
 </p>
 
 <p>
-    <strong>Output: </strong>
-	<p>
-	An integer - the maximum of the total sum of beauty values that can be achieved 
+    <strong>Output: </strong> An integer - the maximum total sum of beauty values that can be achieved 
 	with respect to the constraints.
-	</p>
 </p>
 
 
